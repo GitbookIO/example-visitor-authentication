@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
 
 //
 // Page prompting the authentication of the user on the application side.
+// This endpoint is the equivalent of your login page.
 //
 app.get('/auth', (req, res) => {
     res.send(`
@@ -26,6 +27,10 @@ app.get('/auth', (req, res) => {
 
 //
 // Redirect to the documentation with the JWT token signed when auth has been "completed".
+// The user session on your application should be checked here to validate that the user can access the documentation.
+// 
+// ==> This endpoint is the fallback URL to configure on GitBook side.
+//     GitBook will redirect the visitor to this url when authentication is needed.
 //
 app.get('/auth/confirm', (req, res) => {
     const token = jwt.sign({}, gitbookSignKey, { expiresIn: '1h' });
