@@ -1,6 +1,6 @@
 # GitBook "Visitor Authentication" Example
 
-This repository is a small example of an application implementing the GitBook ["Visitor authentication"](https://docs.gitbook.com/features/visitor-authentication).
+This repository is a small example of an application implementing the GitBook ["Visitor authentication"](https://docs.gitbook.com/publishing/visitor-authentication).
 
 You can run this repository with:
 
